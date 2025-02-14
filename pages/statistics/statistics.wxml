@@ -1,0 +1,27 @@
+<view class="container">
+  <view class="stats-header">
+    <view class="total-stats">
+      <view class="stat-card">
+        <text class="stat-title">总番茄钟</text>
+        <text class="stat-value">{{totalPomodoros}}</text>
+      </view>
+      <view class="stat-card">
+        <text class="stat-title">总专注时间</text>
+        <text class="stat-value">{{totalHours}}小时</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="daily-stats">
+    <view class="section-title">近7天数据</view>
+    <view class="daily-list">
+      <view class="daily-item" wx:for="{{dailyStats}}" wx:key="date">
+        <text class="date">{{item.date}}</text>
+        <view class="bar-container">
+          <view class="bar" style="width: {{item.percentage}}%"></view>
+        </view>
+        <text class="count">{{item.count}}个</text>
+      </view>
+    </view>
+  </view>
+</view>

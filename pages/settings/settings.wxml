@@ -1,0 +1,43 @@
+<view class="container">
+  <view class="settings-list">
+    <view class="settings-section">
+      <view class="section-title">时间设置</view>
+      <view class="setting-item">
+        <text class="setting-label">工作时长（分钟）</text>
+        <slider class="setting-slider" min="1" max="60" value="{{workTime}}" bindchange="onWorkTimeChange" show-value />
+      </view>
+      <view class="setting-item">
+        <text class="setting-label">短休息时长（分钟）</text>
+        <slider class="setting-slider" min="1" max="30" value="{{breakTime}}" bindchange="onBreakTimeChange" show-value />
+      </view>
+      <view class="setting-item">
+        <text class="setting-label">长休息时长（分钟）</text>
+        <slider class="setting-slider" min="5" max="45" value="{{longBreakTime}}" bindchange="onLongBreakTimeChange" show-value />
+      </view>
+      <view class="setting-item">
+        <text class="setting-label">长休息间隔（番茄钟数）</text>
+        <slider class="setting-slider" min="2" max="8" value="{{longBreakInterval}}" bindchange="onLongBreakIntervalChange" show-value />
+      </view>
+    </view>
+
+    <view class="settings-section">
+      <view class="section-title">通知设置</view>
+      <view class="setting-item">
+        <text class="setting-label">自动开始下一个计时</text>
+        <switch checked="{{autoStart}}" bindchange="onAutoStartChange" color="#ff4d4f" />
+      </view>
+      <view class="setting-item">
+        <text class="setting-label">通知提醒</text>
+        <switch checked="{{notification}}" bindchange="onNotificationChange" color="#ff4d4f" />
+      </view>
+      <view class="setting-item">
+        <text class="setting-label">振动提醒</text>
+        <switch checked="{{vibration}}" bindchange="onVibrationChange" color="#ff4d4f" />
+      </view>
+      <view class="setting-item">
+        <text class="setting-label">声音提醒</text>
+        <switch checked="{{sound}}" bindchange="onSoundChange" color="#ff4d4f" />
+      </view>
+    </view>
+  </view>
+</view>
